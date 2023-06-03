@@ -1,18 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Navbar.css";
 
 function Navbar() {
+  const [isPopoverActive, setIsPopoverActive] = useState(false);
+
+  const handlePopoverToggle = () => {
+    setIsPopoverActive(!isPopoverActive);
+  };
+
   return (
-    <div>
-      <div id="header" class="main-nav-orange pds-screen-only">
+    <div className={isPopoverActive ? "responsive-menu-active" : ""}>
+      <div id="header" className="main-nav-orange pds-screen-only">
         <button
           type="button"
           id="close-mobile-menu"
-          class="toggle-mobile-menu"
+          className="toggle-mobile-menu"
           data-toggle-menu=""
+          onClick={handlePopoverToggle}
         >
           <svg
-            class="pds-mr-xs"
+            className="pds-mr-xs"
             width="16"
             height="16"
             viewBox="0 0 18 18"
@@ -28,11 +35,11 @@ function Navbar() {
           </svg>
           Close menu
         </button>
-        <nav id="main-nav" class="pds-container">
+        <nav id="main-nav" className="pds-container">
           <ul>
             <li>
               <a
-                class="primary-nav-item is-current"
+                className="primary-nav-item is-current"
                 data-analytics-element-id="main-nav-time"
                 href="/"
               >
@@ -42,7 +49,7 @@ function Navbar() {
 
             <li>
               <a
-                class="primary-nav-item "
+                className="primary-nav-item "
                 data-analytics-element-id="main-nav-expenses"
                 href="/expenses"
               >
@@ -52,7 +59,7 @@ function Navbar() {
 
             <li>
               <a
-                class="primary-nav-item "
+                className="primary-nav-item "
                 data-analytics-element-id="main-nav-projects"
                 href="/projects"
               >
@@ -62,7 +69,7 @@ function Navbar() {
 
             <li>
               <a
-                class="primary-nav-item "
+                className="primary-nav-item "
                 data-analytics-element-id="main-nav-team"
                 href="/team"
               >
@@ -72,7 +79,7 @@ function Navbar() {
 
             <li>
               <a
-                class="primary-nav-item "
+                className="primary-nav-item "
                 data-analytics-element-id="main-nav-reports"
                 href="/reports"
               >
@@ -82,7 +89,7 @@ function Navbar() {
 
             <li>
               <a
-                class="primary-nav-item "
+                className="primary-nav-item "
                 data-analytics-element-id="main-nav-estimates"
                 href="/estimates"
               >
@@ -92,7 +99,7 @@ function Navbar() {
 
             <li>
               <a
-                class="primary-nav-item "
+                className="primary-nav-item "
                 data-analytics-element-id="main-nav-manage"
                 href="/manage"
               >
@@ -104,7 +111,7 @@ function Navbar() {
           <ul>
             <li>
               <a
-                class="secondary-nav-item "
+                className="secondary-nav-item "
                 data-analytics-element-id="main-nav-settings"
                 href="/company/account"
               >
@@ -113,19 +120,22 @@ function Navbar() {
             </li>
 
             <li id="user-nav-lg">
-              <div class="popover-wrapper">
+              <div className="popover-wrapper">
                 <button
                   type="button"
                   id="user-dropdown-toggle"
-                  class="primary-nav-item"
+                  className={`primary-nav-item ${
+                    isPopoverActive ? "popover-active" : ""
+                  }`}
                   aria-label="Profile and settings for Suresh VadakkeMadom"
                   aria-haspopup="true"
-                  aria-expanded="false"
+                  aria-expanded={isPopoverActive ? "true" : "false"}
                   data-popover=""
                   data-analytics-element-id="main-nav-profile-menu"
+                  onClick={handlePopoverToggle}
                 >
                   <img
-                    class="pds-avatar"
+                    className="pds-avatar"
                     alt=""
                     height="28"
                     width="28"
@@ -138,14 +148,18 @@ function Navbar() {
 
                 <div
                   id="popover-user"
-                  class="dropdown is-down-right"
+                  class={`dropdown is-down-right ${
+                    isPopoverActive ? "is-visible" : ""
+                  }`}
                   role="menu"
                   aria-labelledby="user-dropdown-toggle"
-                  aria-hidden="true"
+                  aria-hidden="false"
+                  data-focus-wrap="true"
+                  style={{ top: "48px", left: "-88px" }}
                 >
-                  <div class="user-information" role="presentation">
+                  <div className="user-information" role="presentation">
                     <img
-                      class="pds-avatar"
+                      className="pds-avatar"
                       alt=""
                       height="40"
                       width="40"
@@ -154,8 +168,8 @@ function Navbar() {
                       src="https://proxy.harvestfiles.com/production_harvestapp_public/uploads/users/avatar/004/636/614/c15cf1b14b488137af1fa3b2683b14004738c157/normal.png?1685719008"
                     />
                     <div>
-                      <div class="pds-weight-semi">Suresh VadakkeMadom</div>
-                      <div class="pds-text-sm pds-color-muted">.</div>
+                      <div className="pds-weight-semi">Suresh VadakkeMadom</div>
+                      <div className="pds-text-sm pds-color-muted">.</div>
                     </div>
                   </div>
                   <nav>
@@ -198,14 +212,14 @@ function Navbar() {
                       </li>
                       <li>
                         <a
-                          class="secondary-user-nav-item"
+                          className="secondary-user-nav-item"
                           data-analytics-element-id="main-nav-settings"
                           href="/company/account"
                         >
                           Settings
                         </a>
                       </li>
-                      <li class="popover-seperator" aria-hidden="true"></li>
+                      <li className="popover-seperator" aria-hidden="true"></li>
                       <li>
                         <a
                           role="menuitem"
@@ -263,14 +277,14 @@ function Navbar() {
             </li>
             <li>
               <a
-                class="secondary-user-nav-item"
+                className="secondary-user-nav-item"
                 data-analytics-element-id="main-nav-settings"
                 href="/company/account"
               >
                 Settings
               </a>
             </li>
-            <li class="popover-seperator" aria-hidden="true"></li>
+            <li className="popover-seperator" aria-hidden="true"></li>
             <li>
               <a
                 role="menuitem"

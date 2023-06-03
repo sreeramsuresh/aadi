@@ -12,7 +12,7 @@ import Manage from "./Components/Manage/Manage";
 
 function App() {
   return (
-    <div className="responsive-menu-active">
+    <div>
       <Navbar />
       <Router>
         <Routes>
