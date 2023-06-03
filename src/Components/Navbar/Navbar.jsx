@@ -83,16 +83,6 @@ function Navbar() {
             <li>
               <a
                 class="primary-nav-item "
-                data-analytics-element-id="main-nav-invoices"
-                href="/invoices"
-              >
-                Invoices
-              </a>
-            </li>
-
-            <li>
-              <a
-                class="primary-nav-item "
                 data-analytics-element-id="main-nav-estimates"
                 href="/estimates"
               >
