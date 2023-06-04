@@ -1,10 +1,10 @@
 import React from "react";
-import Time_Home from "../Time_Home/Time_Home";
+import TIME_HOME from "../TIME_HOME/TIME_HOME";
 
 function Approved() {
   return (
     <div>
-      <Time_Home />
+      <TIME_HOME />
     </div>
   );
 }

@@ -25,9 +25,9 @@ function Navbar() {
             viewBox="0 0 18 18"
             fill="none"
             stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
             aria-label="X icon"
           >
             <path d="M14.25 3.75L3.75 14.25"></path>
@@ -148,7 +148,7 @@ function Navbar() {
 
                 <div
                   id="popover-user"
-                  class={`dropdown is-down-right ${
+                  className={`dropdown is-down-right ${
                     isPopoverActive ? "is-visible" : ""
                   }`}
                   role="menu"
@@ -301,26 +301,26 @@ function Navbar() {
       <div id="view">
         <div>
           <div
-            class="main-nav-orange pds-screen-only"
+            className="main-nav-orange pds-screen-only"
             data-apps-webview-id="navigation"
           >
             <button
               type="button"
               id="open-mobile-menu"
-              class="toggle-mobile-menu"
+              className="toggle-mobile-menu"
               data-toggle-menu=""
               onClick={handlePopoverToggle}
             >
               <svg
-                class="pds-mr-sm"
+                className="pds-mr-sm"
                 width="16"
                 height="16"
                 viewBox="0 0 18 18"
                 fill="none"
                 stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               >
                 <path d="M12.8889 7H2"></path>
                 <path d="M16 3H2"></path>
