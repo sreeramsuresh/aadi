@@ -4,17 +4,17 @@ import "./Footer.css";
 function Footer() {
   return (
     <div>
-      <div id="footer" class="pds-screen-only">
+      <div id="footer" className="pds-screen-only">
         <div
           id="onboarding-guide-tip"
           role="alert"
-          class="pds-card pds-card-success"
+          className="pds-card pds-card-success"
         >
           Need help getting set up and sharing Harvest with your team?
           <a
             href="https://calendly.com/getharvest-cs/onboarding-call"
             target="_blank"
-            rel="noopener"
+            rel="noreferrer"
           >
             Connect with an Onboarding Guide
           </a>
@@ -31,9 +31,9 @@ function Footer() {
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             >
               <line x1="18" y1="6" x2="6" y2="18"></line>
               <line x1="6" y1="6" x2="18" y2="18"></line>
@@ -41,27 +41,31 @@ function Footer() {
           </button>
         </div>
 
-        <div id="footer-upgrade" class="test-upgrade-footer test-trial-active">
-          <span class="pds-color-muted">
+        <div
+          id="footer-upgrade"
+          className="test-upgrade-footer test-trial-active"
+        >
+          <span className="pds-color-muted">
             You have <strong>28 days</strong> left in your free trial.
           </span>
           <a
-            class="pds-button pds-button-sm pds-button"
+            className="pds-button pds-button-sm pds-button"
             data-analytics-element-id="footer-upgrade"
             href="/company/edit_plan"
+            rel="noreferrer"
           >
             Upgrade
           </a>
         </div>
 
-        <nav class="footer-nav">
+        <nav className="footer-nav">
           <a
-            class="footer-harvest-logo"
+            className="footer-harvest-logo"
             target="_blank"
-            rel="noopener"
             aria-label="GetHarvest Home Page"
             data-analytics-element-id="footer-nav-logo"
             href="https://www.getharvest.com"
+            rel="noreferrer"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -90,7 +94,7 @@ function Footer() {
             <li>
               <a
                 target="_blank"
-                rel="noopener"
+                rel="noreferrer"
                 data-analytics-element-id="footer-nav-terms"
                 href="https://www.getharvest.com/services/terms-of-service"
               >
@@ -100,7 +104,7 @@ function Footer() {
             <li>
               <a
                 target="_blank"
-                rel="noopener"
+                rel="noreferrer"
                 data-analytics-element-id="footer-nav-privacy"
                 href="https://www.getharvest.com/services/privacy-policy"
               >
@@ -110,7 +114,7 @@ function Footer() {
             <li>
               <a
                 target="_blank"
-                rel="noopener"
+                rel="noreferrer"
                 data-analytics-element-id="footer-nav-status"
                 href="http://www.harveststatus.com"
               >
@@ -120,7 +124,7 @@ function Footer() {
             <li>
               <a
                 target="_blank"
-                rel="noopener"
+                rel="noreferrer"
                 data-analytics-element-id="footer-nav-blog"
                 href="https://blog.getharvest.com"
               >
@@ -130,7 +134,7 @@ function Footer() {
             <li>
               <a
                 target="_blank"
-                rel="noopener"
+                rel="noreferrer"
                 data-analytics-element-id="footer-nav-help"
                 href="https://help.getharvest.com/harvest?harvestappreferral=https%3A%2F%2F659.harvestapp.com%2Ftime"
               >

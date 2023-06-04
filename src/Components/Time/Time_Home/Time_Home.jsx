@@ -1,15 +1,15 @@
 import React from "react";
 
-function Time_Home() {
+function TIME_HOME() {
   return (
     <div>
-      <nav id="sub-nav" class="pds-screen-only">
-        <div class="pds-container">
-          <ul class="sub-nav-tabs">
+      <nav id="sub-nav" className="pds-screen-only">
+        <div className="pds-container">
+          <ul className="sub-nav-tabs">
             <li>
               <a
                 data-analytics-element-id="sub-nav-time-timesheet"
-                class="current"
+                className="current"
                 href="/"
               >
                 Timesheet
@@ -34,7 +34,7 @@ function Time_Home() {
             <li>
               <a
                 data-analytics-element-id="sub-nav-time-archive"
-                class="nobdr"
+                className="nobdr"
                 href="/approve/archives"
               >
                 Approved
@@ -47,4 +47,4 @@ function Time_Home() {
   );
 }
 
-export default Time_Home;
+export default TIME_HOME;

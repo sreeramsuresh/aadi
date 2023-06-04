@@ -10,10 +10,10 @@ import Reports from "./Components/Reports/Reports";
 import Estimates from "./Components/Estimates/Estimates";
 import Manage from "./Components/Manage/Manage";
 import Timesheet from "./Components/Time/Timesheet/Timesheet";
-import Pending_Approval from "./Components/Time/Pending_Approval/Pending_Approval";
 import Unsubmitted from "./Components/Time/Unsubmitted/Unsubmitted";
 import Approved from "./Components/Time/Approved/Approved";
-import Footer from "./Components/Footer/Footer";
+import PENDING_APPROVAL from "./Components/Time/PENDING_APPROVAL/PENDING_APPROVAL";
+// import Footer from "./Components/Footer/Footer";
 
 function App() {
   return (
@@ -29,7 +29,7 @@ function App() {
           <Route path="/estimates" element={<Estimates />} />
           <Route path="/manage" element={<Manage />} />
           <Route path="/" element={<Timesheet />} />
-          <Route path="/approve" element={<Pending_Approval />} />
+          <Route path="/approve" element={<PENDING_APPROVAL />} />
           <Route path="/missing_time" element={<Unsubmitted />} />
           <Route path="/approve/archives" element={<Approved />} />
         </Routes>

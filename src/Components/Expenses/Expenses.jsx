@@ -3,16 +3,17 @@ import "../../Components/Expenses/expenses.css";
 function Expenses() {
   return (
     <>
-      <main id="main" role="main" className="pds-pt-xl">
-        <div className="pds-container js-expense-view-wrapper">
-          <header className="pds-mb-lg">
-            <h1 className="pds-mb-md">
-              Expenses<span className="pds-print-only"> for black panther</span>
+      <main id="main" role="main" class="pds-pt-xl">
+        <div class="pds-container js-expense-view-wrapper">
+          <header class="pds-mb-lg">
+            <h1 class="pds-mb-md">
+              Expenses
+              <span class="pds-print-only"> for black panther</span>
             </h1>
-            <div className="pds-flex pds-justify-between pds-screen-only">
+            <div class="pds-flex pds-justify-between pds-screen-only">
               <button
                 type="button"
-                className="pds-button pds-button-primary js-show-add-form"
+                class="pds-button pds-button-primary js-show-add-form"
                 data-analytics-element-id="expenses-new"
                 aria-disabled="false"
               >
@@ -23,9 +24,9 @@ function Expenses() {
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                   aria='{:hidden=>"true"}'
                 >
                   <line x1="12" y1="5" x2="12" y2="19"></line>
@@ -36,15 +37,15 @@ function Expenses() {
               <div
                 hidden=""
                 id="expense-invoiced-tooltip"
-                className="pds-tooltip-sm"
+                class="pds-tooltip-sm"
               >
                 This expense was invoiced and cannot be marked as non-billable.
               </div>
               <div id="user-switcher">
                 <input type="hidden" name="users" value="" />
-                <div className="pds-chosen pds-chosen-container pds-chosen-menu">
-                  <button className="pds-button pds-chosen-button pds-chosen-blank">
-                    <div className="pds-chosen-selection">Teammates</div>
+                <div class="pds-chosen pds-chosen-container pds-chosen-menu">
+                  <button class="pds-button pds-chosen-button pds-chosen-blank">
+                    <div class="pds-chosen-selection">Teammates</div>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="16"
@@ -52,11 +53,11 @@ function Expenses() {
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
                       aria-label="Down chevron icon"
-                      className="pds-flex-no-shrink"
+                      class="pds-flex-no-shrink"
                       aria-hidden="true"
                     >
                       <polyline points="5 9 12 17 19 9"></polyline>
@@ -66,44 +67,44 @@ function Expenses() {
               </div>
             </div>
 
-            <div className="expenses-add-form pds-mt-lg pds-screen-only js-add-expense-form"></div>
+            <div class="expenses-add-form pds-mt-lg pds-screen-only js-add-expense-form"></div>
           </header>
 
-          <div className="js-expense-weeks-container">
-            <div className="pds-empty pds-position-relative">
+          <div class="js-expense-weeks-container">
+            <div class="pds-empty pds-position-relative">
               <img
                 src="https://cache.harvestapp.com/static/illustrations/expense_onboard-AAC9C67E.png"
                 srcset="https://cache.harvestapp.com/static/illustrations/expense_onboard@2x-3E90EEDB.png 2x"
                 width="249"
                 height="200"
                 alt=""
-                className="pds-mb-lg"
+                class="pds-mb-lg"
                 aria-hidden="true"
               />
               <div>
                 Record those airline tickets, meals, miles, and other expenses
                 in Harvest
-                <br className="pds-show@md" aria-hidden="true" />
+                <br class="pds-show@md" aria-hidden="true" />
                 so you can more accurately budget projects and invoice clients.
               </div>
             </div>
           </div>
 
           <div
-            className="expenses-show-more-container more-to-show js-expense-show-more-container"
+            class="expenses-show-more-container more-to-show js-expense-show-more-container"
             hidden=""
           >
             <button
               type="button"
-              className="pds-button js-show-more"
+              class="pds-button js-show-more"
               data-analytics-element-id="expenses-show-more"
             >
               Show more expenses
             </button>
-            <span className="hui-spinner js-show-more-spinner" hidden="">
+            <span class="hui-spinner js-show-more-spinner" hidden="">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="hui-spin"
+                class="hui-spin"
                 width="16"
                 height="16"
                 viewBox="0 0 16 16"
