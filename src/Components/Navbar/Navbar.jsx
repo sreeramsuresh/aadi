@@ -297,6 +297,41 @@ function Navbar() {
           </ul>
         </nav>
       </div>
+
+      <div id="view">
+        <div>
+          <div
+            class="main-nav-orange pds-screen-only"
+            data-apps-webview-id="navigation"
+          >
+            <button
+              type="button"
+              id="open-mobile-menu"
+              class="toggle-mobile-menu"
+              data-toggle-menu=""
+              onClick={handlePopoverToggle}
+            >
+              <svg
+                class="pds-mr-sm"
+                width="16"
+                height="16"
+                viewBox="0 0 18 18"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M12.8889 7H2"></path>
+                <path d="M16 3H2"></path>
+                <path d="M16 11H2"></path>
+                <path d="M12.8889 15H2"></path>
+              </svg>
+              Time
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
