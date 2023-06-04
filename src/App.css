@@ -17,3 +17,7 @@ body {
   grid-template-rows: 1fr;
   min-height: 100%;
 }
+
+body::-webkit-scrollbar {
+  width: 0em;
+}

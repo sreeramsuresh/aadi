@@ -1,48 +1,20 @@
 import React from "react";
+import "./Time.css";
+import Timesheet from "./Timesheet/Timesheet";
+import Time_Home from "./Time_Home/Time_Home";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Pending_Approval from "./Pending_Approval/Pending_Approval";
 
 function Time() {
   return (
     <div>
-      <nav id="sub-nav" class="pds-screen-only">
-        <div class="pds-container">
-          <ul class="sub-nav-tabs">
-            <li>
-              <a
-                data-analytics-element-id="sub-nav-time-timesheet"
-                class="current"
-                href="/"
-              >
-                Timesheet
-              </a>
-            </li>
-            <li>
-              <a
-                data-analytics-element-id="sub-nav-time-pending-approval"
-                href="/approve"
-              >
-                Pending approval <strong>•</strong>
-              </a>
-            </li>
-            <li>
-              <a
-                data-analytics-element-id="sub-nav-time-unsubmitted"
-                href="/missing_time"
-              >
-                Unsubmitted
-              </a>
-            </li>
-            <li>
-              <a
-                data-analytics-element-id="sub-nav-time-archive"
-                class="nobdr"
-                href="/approve/archives"
-              >
-                Approved
-              </a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+      <Time_Home />
+      <Timesheet />
+
+      {/* <Routes>
+        <Route exact path="/timesheet" element={<Timesheet />} />
+        <Route path="/approve" element={<Pending_Approval />} />
+      </Routes> */}
     </div>
   );
 }
