@@ -255,6 +255,48 @@ table {
   max-width: 160px;
 }
 
+.pds-badge-blue {
+  background: #376bdd;
+  border-color: transparent;
+  color: #fff;
+}
+
+.pds-badge,
+.pds-tab-count {
+  background: transparent;
+  border: 1px solid rgba(29, 30, 28, 0.3);
+  border-radius: 24px;
+  color: #1d1e1cb3;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1;
+  padding: 4px 8px;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.pds-weight-normal {
+  font-weight: 400 !important;
+}
+
+.day-view-week-nav .pds-tab {
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.day-view-week-nav .pds-tab svg {
+  margin-top: -2px;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+.pds-w-full {
+  width: 100% !important;
+}
+
 @media (min-width: 768px) {
   .day-view-wrapper {
     grid-template-columns: 64px 1fr;
